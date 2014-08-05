@@ -12,9 +12,9 @@
     <asp:Label ID="UserLevel" runat="server" Text=""></asp:Label>
     <br/>
     <br/>
-    <asp:Button ID="ModiftPassWord" runat="server" Text="修改密码"/> &nbsp &nbsp
-        <asp:Button ID="Logout" runat="server" Text="注 销"/> &nbsp &nbsp
+    <asp:Button ID="ModiftPassWord" runat="server" Text="修改密码" OnClick="ModiftPassWord_Click"/> &nbsp &nbsp
+        <asp:Button ID="Logout" runat="server" Text="注 销" OnClick="Logout_Click"/> &nbsp &nbsp
     <%--以下按钮仅管理员可见--%>
-        <asp:Button ID="UserManage" runat="server" Text="管理用户"/> &nbsp &nbsp
+        <asp:Button ID="UserManage" runat="server" Text="管理用户" OnClick="UserManage_Click"/> &nbsp &nbsp
 </asp:Content>
 

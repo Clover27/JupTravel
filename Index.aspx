@@ -80,7 +80,7 @@
            <%-- 请修改以下登陆|注册信息以显示当前登陆状况--%>
             <div class ="div3">
             
-                   <a  href="/Login.aspx" >登陆</a>|<a href="/Register.aspx">注册</a>
+                   <a  href="Login.aspx" >登陆</a>|<a href="Register.aspx">注册</a>
                 
             </div>
 
@@ -88,7 +88,7 @@
             <div class="nav">
                 
                 <br/>
-              <a href="/Index.aspx">主&nbsp;&nbsp;页</a><br />
+              <a href="Index.aspx">主&nbsp;&nbsp;页</a><br />
                 <a href="UserInfo.aspx">个人信息</a><br />
                 导航<br />
                 导航</div>

@@ -78,7 +78,7 @@
                 
             </div>
     <div class="nav">
-            <a href="/Index.aspx">回到主页</a>
+            <a href="Index.aspx">回到主页</a>
 
              </div>
          <div class="body">
@@ -87,13 +87,15 @@
              
             用户名: 
              <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+             <asp:Label ID="Warn1" runat="server" Text=""  ForeColor="Red"></asp:Label>
              <br/>
              <br/>
              密&nbsp&nbsp码:
              <asp:TextBox ID="PassWord" runat="server" TextMode="Password"></asp:TextBox>
+             <asp:Label ID="Warn2" runat="server" Text=""  ForeColor="Red"></asp:Label>
              <br/>
              <br/>
-             <asp:Button ID="LogSub" runat ="server" Text="确 定" /> &nbsp &nbsp &nbsp
+             <asp:Button ID="LogSub" runat ="server" Text="确 定" OnClick="LogSub_Click" /> &nbsp &nbsp &nbsp
              <asp:Button ID="LogReg" runat ="server" Text="注 册" OnClick="LogReg_Click" /> 
             </div>
          
