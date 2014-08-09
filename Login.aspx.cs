@@ -14,7 +14,7 @@ public partial class Login : System.Web.UI.Page
         if((string)Session["login"] == "yes")
         {
             Session["Default"] = "enlogin";
-            Response.Redirect("/Default.aspx");
+            Response.Redirect("/jmp.aspx");
         }
     }
     protected void LogReg_Click(object sender, EventArgs e)

@@ -8,6 +8,34 @@
      <style type="text/css">
 <!--
 
+a {
+            text-decoration:none;
+            font-weight:700;
+              color:black;
+            font:900;
+            
+        }
+a:visited {
+            text-decoration:none;
+            font-weight:700;
+            color:black;
+            font:900;
+            
+        }
+a:active {
+            text-decoration:none;
+            font-weight:700;
+             color:black;
+            font:900;
+            
+        }
+a:hover {
+            text-decoration:none;
+            font-weight:700;
+            color:darkblue;
+            font:900;
+            
+        }
  body{text-align:center;}
 
 -->
@@ -42,10 +70,12 @@
         .nav {
             width: 200px;
             height: auto;
-            margin: 0 auto;
+            margin: 20px auto;
             background: #def9fa;
             position: fixed;
-          
+            
+            background-image:url(src/index_pic/nav_bg.jpg);
+            
             text-align: center;
         }
         .navR {
@@ -56,7 +86,7 @@
             background: #def9fa;
             float:right;
             position: fixed;
-              
+              background-image:url(src/index_pic/nav_bg.jpg);
             text-align: center;
         }
         .body {
@@ -90,26 +120,32 @@
 
             <div class="nav">
                 
-                <br/>
-                <a href="Index.aspx">主&nbsp;&nbsp;页</a><br />
-                <a href="UserInfo.aspx">个人信息</a><br />
-                导航<br />
-                导航</div>
+               
+              <p><a href="Index.aspx">主&nbsp;&nbsp;页</a></p>
+               <p><a href="UserInfo.aspx">个人信息</a></p> 
+              
+                <%--请实现，当点击该导航时index页面跳转到对应的位置（即自动滚到index页的地域分类和类型分类位置）--%>
+                 <p> 地域分类<br /></p>
+                
+                <p>类型分类</p></div>
 
             <div class="navR">
                 
                 
-                导2航<br />
-                导2航<br />
-                导2航<br />
-                导2航</div>
+                <p>联系我们</p>
+                <a href="news_list.aspx"><p>新闻资讯</p></a> 
+                <p>导2航</p>
+                 <p>导2航</p>
+                </div>
 
             <div class="body">
                         <asp:ContentPlaceHolder id="body" runat="server">
         
         </asp:ContentPlaceHolder>
                 </div>
-           
+        <div style=" text-align:center;color:gray">
+           Jup Travel —— 景升旅游网 All rights reserved!
+            </div>
         </div>
 
         

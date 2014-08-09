@@ -25,7 +25,7 @@ public partial class UserInfo : System.Web.UI.Page
         }
         else {
             Session["Default"] = "unlogin";
-            Response.Redirect("Default.aspx");
+            Response.Redirect("jmp.aspx");
             
 
         }

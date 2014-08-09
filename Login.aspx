@@ -99,8 +99,11 @@
              <asp:Button ID="LogReg" runat ="server" Text="注 册" OnClick="LogReg_Click" /> 
             </div>
          
-
+         <div style=" text-align:center;color:gray">
+           Jup Travel —— 景升旅游网 All rights reserved!
+            </div>
         </div>
+
     </form>
        </div>
 

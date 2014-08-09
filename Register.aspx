@@ -104,15 +104,18 @@
              <asp:Button ID="RegLog" runat ="server" Text="登 陆" OnClick="RegLog_Click" />
              
             </div>
-         
+          <p>
+            <asp:Label ID="Warn4" runat="server" Text="" ForeColor="Red"></asp:Label>
+        </p>
+         <div style=" text-align:center;color:gray">
+           Jup Travel —— 景升旅游网 All rights reserved!
+            </div>
 
         </div>
     </form>
        </div>
 
-        <p>
-            <asp:Label ID="Warn4" runat="server" Text="" ForeColor="Red"></asp:Label>
-        </p>
+       
 
 </body>
 </html>
