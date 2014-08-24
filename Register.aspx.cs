@@ -25,7 +25,7 @@ public partial class Register : System.Web.UI.Page
         if (UserName.Text != "" && PassWord.Text != "" && PassWordSub.Text == PassWord.Text)
         {
             string s = Server.MapPath("./");
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + s + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename="+s+"App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
             con.Open();
             string check = "select * from people where username='" + UserName.Text + "'";
             SqlDataAdapter da = new SqlDataAdapter(check, con);

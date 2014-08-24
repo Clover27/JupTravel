@@ -31,7 +31,7 @@ public partial class Login : System.Web.UI.Page
             string z = System.Web.HttpContext.Current.Request.Path;
             //UserName.Text = s;
             //Console.WriteLine(z+"  "+s);
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename="+s+"App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + s + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
             con.Open();
             string strsql = "select * from people where username='" + UserName.Text + "' and password='" + PassWord.Text + "'"; 
             SqlDataAdapter da = new SqlDataAdapter(strsql, con); 
