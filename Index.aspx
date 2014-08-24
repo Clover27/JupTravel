@@ -103,6 +103,39 @@ a:hover {
             align-content:center;
             margin:auto auto;
         }
+        .vp1 {
+            width:208px;
+            height:300px;
+        }
+         .vp2 {
+            width:208px;
+            height:300px;
+            margin-left:208px;
+            margin-top:-300px;
+        }
+          .vp3 {
+            width:208px;
+            height:300px;
+            margin-left: 416px;
+            margin-top:-300px;
+        }
+        .d1 {
+            width:208px;
+            height:20px;
+            margin-top:3px;
+        }
+         .d2 {
+            width:208px;
+            height:20px;
+            margin-left:208px;
+            margin-top:-20px;
+        }
+          .d3 {
+            width:208px;
+            height:20px;
+            margin-left: 416px;
+            margin-top:-20px;
+        }
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
@@ -150,13 +183,21 @@ a:hover {
                </div>
                  <div style =" width :auto;height:400px; ">
                      <img src="src/index_pic/area_img.png" />
-
-
+                     <div class="vp1"><a href="#"><img src="src/index_pic/a1.png"/></a></div>
+                    <div class="vp2"><a href="#"><img src="src/index_pic/a2.png"/></a></div>
+                    <div class="vp3"><a href="#"><img src="src/index_pic/a3.png"/></a></div>
+                     <div class ="d1"><a href="#">市内景点</a></div>
+                     <div class ="d2"><a href="#">郊区景点</a></div>
+                     <div class ="d3"><a href="#">远郊区县</a></div>
                  </div>
                 <div style =" width :auto;height:400px; ">
                      <img src="src/index_pic/type_img.png" />
-
-
+                    <div class="vp1"><a href="#"><img src="src/index_pic/c1.png"/></a></div>
+                    <div class="vp2"><a href="#"><img src="src/index_pic/c2.png"/></a></div>
+                    <div class="vp3"><a href="#"><img src="src/index_pic/c3.png"/></a></div>
+                    <div class ="d1"><a href="#">宫殿古迹</a></div>
+                     <div class ="d2"><a href="#">公园广场</a></div>
+                     <div class ="d3"><a href="#">名街名苑</a></div>
                  </div>
                 Body<br/>
                 Body<br/>
