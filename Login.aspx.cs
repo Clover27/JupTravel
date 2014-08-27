@@ -14,12 +14,12 @@ public partial class Login : System.Web.UI.Page
         if((string)Session["login"] == "yes")
         {
             Session["Default"] = "enlogin";
-            Response.Redirect("/jmp.aspx");
+            Response.Redirect("jmp.aspx");
         }
     }
     protected void LogReg_Click(object sender, EventArgs e)
     {
-        Response.Redirect("/Register.aspx");
+        Response.Redirect("Register.aspx");
     }
     protected void LogSub_Click(object sender, EventArgs e)
     {

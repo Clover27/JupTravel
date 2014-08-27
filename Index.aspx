@@ -163,16 +163,16 @@ a:hover {
                <p><a href="UserInfo.aspx">个人信息</a></p> 
               
                 <%--请实现，当点击该导航时index页面跳转到对应的位置（即自动滚到index页的地域分类和类型分类位置）--%>
-                 <p> 地域分类<br /></p>
+                 <p> <a href="area.aspx">地域分类</a><br /></p>
                 
-                <p>类型分类</p></div>
+                <p><a href="type.aspx">类型分类</a></p></div>
 
             <div class="navR">
                 
                 
                 <p>联系我们</p>
                  <p><a href="news_list.aspx" >新闻资讯</a></p>
-                <p>导2航</p>
+                <p>查询景点</p>
                  <p>导2航</p>
                 </div>
             <div class="body">
