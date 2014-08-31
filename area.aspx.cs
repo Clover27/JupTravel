@@ -9,6 +9,9 @@ public partial class area : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Session["lastclick"] = "0";
+        if (Request.QueryString["id"] != null)    
+            Session["lastclick"] = Request.QueryString["id"].ToString();
+        
     }
 }

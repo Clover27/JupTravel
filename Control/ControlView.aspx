@@ -46,9 +46,8 @@
         
         .body {
             width:624px;
-            height:auto;
-            margin:auto 20px;
-
+            height:253px;
+            margin:auto 20px auto 207px;
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -79,8 +78,47 @@
                </div>
 
             <div class="body">
-                        <br />
-                        这里是管理员界面
+                <table class="style1">
+            <tr>
+                <td>
+                    添加新分类:</td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    从属分类：</td>
+                <td>
+  
+                    <asp:RadioButton GroupName="1" ID="RadioButton1" runat="server" text="地域"/>
+                    <asp:RadioButton GroupName="1" ID="RadioButton2" runat="server" text="类型"/>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   分类说明</td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:TextBox ID="TextBox5" runat="server" Height="111px" TextMode="MultiLine" 
+                        Width="100%" style="margin-right: 194px"></asp:TextBox>
+               
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                        style="width: 78px" Text="提交分类" />
+                    <br />
+                </td>
+            </tr>
+        </table>
+                         
                         
                 </div>
            

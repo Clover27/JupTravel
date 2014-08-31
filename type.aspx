@@ -80,81 +80,89 @@
     <div>
         <img src="src/index_pic/type_img.png" />
         <div class="vp1">
-            <div class="title">宫殿古迹<br/></div>
+            <div class="title"><br/></div>
             <div class="con1">
-                故宫<br />
-                明十三陵<br /> 
-                慕田峪长城<br /> 
-                雍和宫<br />
+
                
             </div>
 
             <div class="con2">
-                八达岭长城<br />
-               颐和园<br />
-              
-                天坛<br />
+
                 
             </div>
 
         </div>
 
         <div class="vp2">
-            <div class="title">公园广场</div>
+            <div class="title"></div>
             <div class="con1">
-                天安门<br />
-                 北海公园<br />
-                香山公园<br />
-                十渡
+
 
             </div>
 
 
 
             <div class="con2">
-               龙庆峡<br />
-               什刹海<br />
-                蟒山森林公园<br /> 坝上草原
+
             </div>
         </div>
 
         <div class="vp3">
-            <div class="title">名街名媛</div>
+            <div class="title"></div>
             <div class="con1">
-                王府井<br />
-                南锣鼓巷<br />
-                密云水库<br />
-                云蒙山<br />
+
             </div>
 
             <div class="con2">
-                簋街<br />
-                雾灵山<br />
-                798艺术区<br />
+
             </div>
         </div>
         <div class="t">
-            Title
-
         </div>
 
         <div class="c">
             <div class="pic">
-                图图图图
+               
+                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333">
+                    <AlternatingItemStyle BackColor="White" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <ItemStyle BackColor="#EFF3FB" />
+                    <ItemTemplate>
+                        <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Blue" NavigateUrl='<%#"type.aspx?id="+Eval("last") %>'/>
+<br />
+                    </ItemTemplate>
+                    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Classify] WHERE ([first] = @last)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="类型分类" Name="last" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+               
             </div>
             <div class="text1">
-                <p>【简介】：<br/></p>
-                <p>【类型】：<br/></p>
-                <p>【面积】：<br/></p>
-                <p>【日均客流量】：<br/></p>
-                <p>【地点】：<br/></p>
-                <p>【乘车路线】：<br/></p>
-                <p>【主要景区】：<br/></p>
+
+
+                <asp:DataList ID="DataList2" runat="server" DataKeyField="id" DataSourceID="SqlDataSource2">
+                    <ItemTemplate>
+
+                        <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>'  ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
+                        <br />
+                  
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([leixing] = @leixing)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="leixing" SessionField="lastclick" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+
 
             </div>
 
             <div class="text2">
-                可图 可文字 可以是游玩过程 攻略等。
+
             </div>
         </div>
 

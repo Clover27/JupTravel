@@ -47,8 +47,11 @@
         .body {
             width:624px;
             height:auto;
-            margin:auto 20px;
+            margin:auto 250px;
 
+        }
+        .auto-style3 {
+            height: 27px;
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -79,17 +82,94 @@
                </div>
 
             <div class="body">
-                        <br />
-                        这里是管理员界面
-                        
+              
+        <table class="style1">
+            <tr>
+                <td>
+                    景区名称:</td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    地域分类:</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    类型分类:</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    面积:</td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    日均客流量:</td>
+                <td>
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    地点:</td>
+                <td>
+                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    乘车路线:</td>
+                <td>
+                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    主要景区列表:</td>
+                <td>
+                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    相关图片:</td>
+                <td>
+                    <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    景区描述</td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:TextBox ID="TextBox5" runat="server" Height="206px" TextMode="MultiLine" 
+                        Width="100%" style="margin-right: 194px"></asp:TextBox>
+               
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Button ID="Button1" runat="server" 
+                        style="width: 78px" Text="景区发布" />
+                    <br />
+                </td>
+            </tr>
+        </table>     
                 </div>
-           
         </div>
-
-        
-
-
-   
     </form>
 </body>
 </html>

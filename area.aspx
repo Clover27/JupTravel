@@ -79,81 +79,95 @@
     <div>
         <img src="src/index_pic/area_img.png" />
         <div class="vp1">
-            <div class="title">市内景点<br/></div>
+            <div class="title"><br/></div>
             <div class="con1">
-                故宫<br />
-                什刹海<br />
-                南锣鼓巷<br />
-                雍和宫<br />
-                798艺术区
+                
             </div>
 
-            <div class="con2">
-                天安门<br />
-                北海公园<br />
-                簋街<br />
-                天坛<br />
-                王府井
-            </div>
+            
 
         </div>
 
         <div class="vp2">
-            <div class="title">郊区景点</div>
+            <div class="title"></div>
             <div class="con1">
-                颐和园<br />
-                八达岭长城<br />
-                香山公园<br />
+                
+
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([diyu] = @diyu)">
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="郊区景点" Name="diyu" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
                 
 
             </div>
 
 
 
-            <div class="con2">
-                慕田峪长城<br />
-                明十三陵
-                <br />
-            </div>
+            
         </div>
 
         <div class="vp3">
-            <div class="title">远郊区县</div>
+            <div class="title"></div>
             <div class="con1">
-                龙庆峡<br />
-                十渡<br />
-                密云水库<br />
-                云蒙山<br />
+              
+                  
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([diyu] = @diyu)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="远郊区县" Name="diyu" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                
+                  
             </div>
 
-            <div class="con2">
-                蟒山森林公园<br />
-                雾灵山<br />
-                坝上草原<br />
-            </div>
         </div>
         <div class="t">
-            Title
 
         </div>
 
         <div class="c">
             <div class="pic">
-                图图图图
+                
+                <asp:DataList ID="DataList4" runat="server" DataSourceID="SqlDataSource4" >
+                    <ItemTemplate>
+                        <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Blue" NavigateUrl='<%#"area.aspx?id="+Eval("last") %>' />
+
+                        <br />
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [last] FROM [Classify] WHERE ([first] = @first)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="地域分类" Name="first" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                
+                
             </div>
             <div class="text1">
-                <p>【简介】：<br/></p>
-                <p>【类型】：<br/></p>
-                <p>【面积】：<br/></p>
-                <p>【日均客流量】：<br/></p>
-                <p>【地点】：<br/></p>
-                <p>【乘车路线】：<br/></p>
-                <p>【主要景区】：<br/></p>
+             
+
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([diyu] = @diyu)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="diyu" SessionField="lastclick" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="157px" DataKeyField="id">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>' ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
+                         
+                        <br />
+                        
+                        
+                    </ItemTemplate>
+                </asp:DataList>
+             
 
             </div>
 
             <div class="text2">
-                可图 可文字 可以是游玩过程 攻略等。
+                =
             </div>
         </div>
 
