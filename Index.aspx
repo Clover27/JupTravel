@@ -12,7 +12,6 @@ a {
             font-weight:700;
               color:black;
             font:900;
-            
         }
 a:visited {
             text-decoration:none;
@@ -159,21 +158,21 @@ a:hover {
             <div class="nav">
                 
                
-              <p><a href="Index.aspx" style="text-decoration:none;" >主&nbsp;&nbsp;页</a></p>
+              <br />
+              <p><a href="Index.aspx">主&nbsp;&nbsp;页</a></p>
                <p><a href="UserInfo.aspx">个人信息</a></p> 
               
-                <%--请实现，当点击该导航时index页面跳转到对应的位置（即自动滚到index页的地域分类和类型分类位置）--%>
-                 <p> <a href="area.aspx">地域分类</a><br /></p>
-                
-                <p><a href="type.aspx">类型分类</a></p></div>
-
+                <a href="news_list.aspx"><p>新闻资讯</p></a> 
+                 
+                <br />
+                </div>
             <div class="navR">
                 
                 
-                <p>联系我们</p>
-                 <p><a href="news_list.aspx" >新闻资讯</a></p>
-                <p>查询景点</p>
-                 <p>导2航</p>
+                 <br />
+                 <p> <a href="search.aspx">景点查询</a><br /></p>
+                 <p> <a href="area.aspx">地域分类</a><br /></p>
+                 <p><a href="type.aspx">类型分类</a></p><br />
                 </div>
             <div class="body">
                <%-- 请将以下修改为滚动新闻--%>
@@ -183,102 +182,26 @@ a:hover {
                </div>
                  <div style =" width :auto;height:400px; ">
                      <img src="src/index_pic/area_img.png" />
-                     <div class="vp1"><a href="#"><img src="src/index_pic/a1.png"/></a></div>
-                    <div class="vp2"><a href="#"><img src="src/index_pic/a2.png"/></a></div>
-                    <div class="vp3"><a href="#"><img src="src/index_pic/a3.png"/></a></div>
-                     <div class ="d1"><a href="#">市内景点</a></div>
-                     <div class ="d2"><a href="#">郊区景点</a></div>
-                     <div class ="d3"><a href="#">远郊区县</a></div>
+                     <div class="vp1"><a href="area.aspx?id=市内景点"><img src="src/index_pic/a1.png"/></a></div>
+                    <div class="vp2"><a href="area.aspx?id=郊区景点"><img src="src/index_pic/a2.png"/></a></div>
+                    <div class="vp3"><a href="area.aspx?id=远郊区县"><img src="src/index_pic/a3.png"/></a></div>
+                     <div class ="d1"><a href="area.aspx?id=市内景点">市内景点</a></div>
+                     <div class ="d2"><a href="area.aspx?id=郊区景点">郊区景点</a></div>
+                     <div class ="d3"><a href="area.aspx?id=远郊区县">远郊区县</a></div>
                  </div>
                 <div style =" width :auto;height:400px; ">
                      <img src="src/index_pic/type_img.png" />
-                    <div class="vp1"><a href="#"><img src="src/index_pic/c1.png"/></a></div>
-                    <div class="vp2"><a href="#"><img src="src/index_pic/c2.png"/></a></div>
-                    <div class="vp3"><a href="#"><img src="src/index_pic/c3.png"/></a></div>
-                    <div class ="d1"><a href="#">宫殿古迹</a></div>
-                     <div class ="d2"><a href="#">公园广场</a></div>
-                     <div class ="d3"><a href="#">名街名苑</a></div>
+                    <div class="vp1"><a href="type.aspx?id=宫殿古迹"><img src="src/index_pic/c1.png"/></a></div>
+                    <div class="vp2"><a href="type.aspx?id=公园广场"><img src="src/index_pic/c2.png"/></a></div>
+                    <div class="vp3"><a href="type.aspx?id=名街名苑"><img src="src/index_pic/c3.png"/></a></div>
+                    <div class ="d1"><a href="type.aspx?id=宫殿古迹">宫殿古迹</a></div>
+                     <div class ="d2"><a href="type.aspx?id=公园广场">公园广场</a></div>
+                     <div class ="d3"><a href="type.aspx?id=名街名苑">名街名苑</a></div>
                  </div>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
-                Body<br/>
+           
                 </div>
             
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <br/>
-            <br/>
-            <br/><br/>
-            <br/>
-            <br/>
-            <br/><br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <br/>
-            <br/>
-            <br/><br/>
-            <br/>
-            <br/>
-            <br/><br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <br/>
-            <br/>
-            <br/><br/>
-            <br/>
-            <br/>
-            <br/>
             <div style=" text-align:center;color:gray">
            Jup Travel —— 景升旅游网 All rights reserved!
             </div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ControlInfo.aspx.cs" Inherits="Control_Default2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ControlInfo.aspx.cs" Inherits="ControlInfo" %>
 
 <!DOCTYPE html>
 
@@ -95,14 +95,18 @@
                 <td>
                     地域分类:</td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="diyu" DataValueField="diyu">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT DISTINCT [diyu] FROM [information]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">
                     类型分类:</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="leixing" DataValueField="leixing">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT DISTINCT [leixing] FROM [information]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
@@ -127,9 +131,9 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style3">
                     乘车路线:</td>
-                <td>
+                <td class="auto-style3">
                     <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
                 </td>
             </tr>
@@ -144,7 +148,8 @@
                 <td>
                     相关图片:</td>
                 <td>
-                    <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                    <asp:FileUpload id="fuImage" runat="server"/>
+                    <asp:Button ID="buttonup" runat="server" Text="上传" OnClick="buttonup_Click" />
                 </td>
             </tr>
             <tr>
@@ -163,7 +168,7 @@
             <tr>
                 <td colspan="2">
                     <asp:Button ID="Button1" runat="server" 
-                        style="width: 78px" Text="景区发布" />
+                        style="width: 78px" Text="景区发布" OnClick="Button1_Click" />
                     <br />
                 </td>
             </tr>

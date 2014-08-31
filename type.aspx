@@ -52,7 +52,7 @@
      }
      .c {
          width: 624px;
-         height: 700px;
+         height: 380px;
      }
      .pic {
          width: 310px;
@@ -79,60 +79,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <div>
         <img src="src/index_pic/type_img.png" />
-        <div class="vp1">
-            <div class="title"><br/></div>
-            <div class="con1">
+        
 
-               
-            </div>
-
-            <div class="con2">
-
-                
-            </div>
-
-        </div>
-
-        <div class="vp2">
-            <div class="title"></div>
-            <div class="con1">
-
-
-            </div>
-
-
-
-            <div class="con2">
-
-            </div>
-        </div>
-
-        <div class="vp3">
-            <div class="title"></div>
-            <div class="con1">
-
-            </div>
-
-            <div class="con2">
-
-            </div>
-        </div>
-        <div class="t">
-        </div>
 
         <div class="c">
             <div class="pic">
                
-                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333">
-                    <AlternatingItemStyle BackColor="White" />
-                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <ItemStyle BackColor="#EFF3FB" />
+                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" Font-Size="Larger" style="line-height:50px; margin-left:170px; margin-top:60px;" >
                     <ItemTemplate>
                         <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Blue" NavigateUrl='<%#"type.aspx?id="+Eval("last") %>'/>
 <br />
                     </ItemTemplate>
-                    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Classify] WHERE ([first] = @last)">
                     <SelectParameters>
@@ -144,13 +101,17 @@
             <div class="text1">
 
 
-                <asp:DataList ID="DataList2" runat="server" DataKeyField="id" DataSourceID="SqlDataSource2">
+                <asp:DataList ID="DataList2" runat="server" DataKeyField="id" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both" Font-Size="Medium" style="line-height:25px; margin-left:30px; margin-top:0px;"  >
+                    <FooterStyle BackColor="White" ForeColor="#000066" />
+                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White"   />
+                    <ItemStyle ForeColor="#000066"  />
                     <ItemTemplate>
 
                         <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>'  ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
                         <br />
                   
                     </ItemTemplate>
+                    <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([leixing] = @leixing)">
                     <SelectParameters>
@@ -161,9 +122,7 @@
 
             </div>
 
-            <div class="text2">
-
-            </div>
+            
         </div>
 
     </div>

@@ -130,22 +130,26 @@ a:hover {
 
             <div class="nav">
                 
-               
+                <br />
               <p><a href="Index.aspx">主&nbsp;&nbsp;页</a></p>
                <p><a href="UserInfo.aspx">个人信息</a></p> 
               
-                
-                 <p> <a href="area.aspx">地域分类</a><br /></p>
-                
-                <p><a href="type.aspx">类型分类</a></p></div>
+                <a href="news_list.aspx"><p>新闻资讯</p></a> 
+                 
+                <br />
+               
+
+               
+            </div>
 
             <div class="navR">
                 
                 
-                <p>联系我们</p>
-                <a href="news_list.aspx"><p>新闻资讯</p></a> 
-                <p>查询景点</p>
-                 <p>导2航</p>
+               <!-- <p>联系我们</p>-->
+                <br />
+                 <p> <a href="search.aspx">景点查询</a><br /></p>
+                 <p> <a href="area.aspx">地域分类</a><br /></p>
+                 <p><a href="type.aspx">类型分类</a></p><br />
                 </div>
 
             <div class="body">

@@ -52,7 +52,7 @@
      }
      .c {
          width: 624px;
-         height: 700px;
+         height: 380px;
      }
      .pic {
          width: 310px;
@@ -78,20 +78,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <div>
         <img src="src/index_pic/area_img.png" />
-        <div class="vp1">
-            <div class="title"><br/></div>
-            <div class="con1">
-                
-            </div>
-
-            
-
-        </div>
-
-        <div class="vp2">
-            <div class="title"></div>
-            <div class="con1">
-                
+        
 
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([diyu] = @diyu)">
                 <SelectParameters>
@@ -105,11 +92,7 @@
 
 
             
-        </div>
-
-        <div class="vp3">
-            <div class="title"></div>
-            <div class="con1">
+        
               
                   
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([diyu] = @diyu)">
@@ -119,17 +102,13 @@
                 </asp:SqlDataSource>
                 
                   
-            </div>
-
-        </div>
-        <div class="t">
-
-        </div>
+        
+      
 
         <div class="c">
             <div class="pic">
                 
-                <asp:DataList ID="DataList4" runat="server" DataSourceID="SqlDataSource4" >
+                <asp:DataList ID="DataList4" runat="server" DataSourceID="SqlDataSource4" Font-Size="Larger" style="line-height:50px; margin-left:170px; margin-top:60px;" >
                     <ItemTemplate>
                         <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Blue" NavigateUrl='<%#"area.aspx?id="+Eval("last") %>' />
 
@@ -153,7 +132,10 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                 
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="157px" DataKeyField="id">
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="157px" DataKeyField="id" Font-Size="Medium" style="line-height:25px; margin-left:30px; margin-top:0px;" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both"  >
+                    <FooterStyle BackColor="White" ForeColor="#000066" />
+                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                    <ItemStyle ForeColor="#000066" />
                     <ItemTemplate>
                         <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>' ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
                          
@@ -161,16 +143,15 @@
                         
                         
                     </ItemTemplate>
+                    <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
                 </asp:DataList>
              
 
             </div>
 
-            <div class="text2">
-                =
-            </div>
+            
         </div>
 
-    </div>
+ 
 </asp:Content>
 

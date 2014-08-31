@@ -15,7 +15,7 @@ public partial class UserInfo : System.Web.UI.Page
         {
             UserNameLabel.Text = (string)Session["name"];
             string s = Server.MapPath("./");
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename="+s+"App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("./") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
             con.Open();
             string strsql = "select control from people where username='" + UserNameLabel.Text + "'";
             SqlCommand cmd = new SqlCommand(strsql, con);
