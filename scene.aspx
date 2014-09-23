@@ -30,7 +30,7 @@
                <td><p class="x"><asp:Label ID="Label4" runat="server" Text=""></asp:Label></p></td>
            </tr>
            <tr>
-               <td><p class=xx">【日均客流量】</p></td>
+               <td><p class="xx">【日均客流量】</p></td>
                <td><p class="x"><asp:Label ID="Label5" runat="server" Text=""></asp:Label></p></td>
            </tr>
            <tr>

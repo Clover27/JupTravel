@@ -11,7 +11,7 @@ public partial class  scene : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["login"] != "yes") { TextBox1.Visible = false; Button1.Visible = false; }
-        if (Session["login"] == "yes") { Label3.Visible = false; }
+        if (Session["login"] == "yes") { Label3.Visible = false; Hyperlink1.Visible = false; }
 
         string id = Request.QueryString[0].ToString();
         Session["fromid"] = int.Parse(id);

@@ -9,6 +9,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["login"] == "yes")
+        {
+            HyperLink1.Text = "欢迎您"; HyperLink1.NavigateUrl = "";
+            HyperLink2.Text = Session["name"].ToString();
+            HyperLink2.NavigateUrl = "UserInfo.aspx";
+        }
     }
 }

@@ -150,8 +150,10 @@ a:hover {
            <%-- 请修改以下登陆|注册信息以显示当前登陆状况--%>
             <div class ="div3">
             
-                   <a  href="Login.aspx" >登陆</a>|<a href="Register.aspx">注册</a>
-                
+                   <asp:HyperLink ID="HyperLink1" runat="server" Text="登陆"  ForeColor="Blue"  NavigateUrl="Login.aspx"></asp:HyperLink>
+            
+                  |
+        <asp:HyperLink ID="HyperLink2" runat="server" Text="注册"  ForeColor="Blue"  NavigateUrl="Register.aspx"></asp:HyperLink>
             </div>
 
 

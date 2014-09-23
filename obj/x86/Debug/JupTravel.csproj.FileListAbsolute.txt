@@ -1,0 +1,2 @@
+G:\github\JupTravel\obj\x86\Debug\JupTravel.csprojResolveAssemblyReference.cache
+G:\github\JupTravel\bin\Debug\WindowsApplication.exe.config

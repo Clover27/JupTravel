@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{EA21F944-F931-42B7-B7AE-F9B29E50B2DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>JupTravel</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include="App_Data\Travel.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Travel_log.ldf">
+      <DependentUpon>Travel.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="area.aspx" />
+    <Content Include="Control\Control.aspx" />
+    <Content Include="Control\ControlInfo.aspx" />
+    <Content Include="Control\ControlNews.aspx" />
+    <Content Include="Control\ControlUser.aspx" />
+    <Content Include="Control\ControlView.aspx" />
+    <Content Include="Control\PutNews.aspx" />
+    <Content Include="Index.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="jmp.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="news.aspx" />
+    <Content Include="news_list.aspx" />
+    <Content Include="picture\798艺术区.jpg" />
+    <Content Include="picture\KanColle-140721-15443131.png" />
+    <Content Include="picture\KanColle-140816-13195996.png" />
+    <Content Include="picture\KanColle-140816-15145733.png" />
+    <Content Include="picture\云蒙山.jpg" />
+    <Content Include="picture\什刹海.jpg" />
+    <Content Include="picture\八达岭长城.jpg" />
+    <Content Include="picture\北海公园.jpg" />
+    <Content Include="picture\十渡.jpg" />
+    <Content Include="picture\南锣鼓巷.jpg" />
+    <Content Include="picture\坝上草原.jpg" />
+    <Content Include="picture\天坛公园.jpg" />
+    <Content Include="picture\天安门.jpg" />
+    <Content Include="picture\密云水库.jpg" />
+    <Content Include="picture\慕田峪长城.jpg" />
+    <Content Include="picture\故宫.jpg" />
+    <Content Include="picture\明十三皇陵.jpg" />
+    <Content Include="picture\王府井大街.jpg" />
+    <Content Include="picture\簋街.jpg" />
+    <Content Include="picture\莽山森林公园.jpg" />
+    <Content Include="picture\雍和宫.jpg" />
+    <Content Include="picture\雾灵山风景区.jpg" />
+    <Content Include="picture\颐和园.jpg" />
+    <Content Include="picture\香山公园.jpg" />
+    <Content Include="picture\龙庆峡.jpg" />
+    <Content Include="Register.aspx" />
+    <Content Include="scene.aspx" />
+    <Content Include="search.aspx" />
+    <Content Include="src\index_pic\a1.png" />
+    <Content Include="src\index_pic\a2.png" />
+    <Content Include="src\index_pic\a3.png" />
+    <Content Include="src\index_pic\area_cat.jpg" />
+    <Content Include="src\index_pic\area_img.png" />
+    <Content Include="src\index_pic\c1.png" />
+    <Content Include="src\index_pic\c2.png" />
+    <Content Include="src\index_pic\c3.png" />
+    <Content Include="src\index_pic\nav_bg.jpg" />
+    <Content Include="src\index_pic\type_cat.jpg" />
+    <Content Include="src\index_pic\type_img.png" />
+    <Content Include="src\LOGO.jpg" />
+    <Content Include="src\news_pic\1.jpg" />
+    <Content Include="src\news_pic\2.jpg" />
+    <Content Include="src\news_pic\3.jpg" />
+    <Content Include="src\news_pic\4.jpg" />
+    <Content Include="type.aspx" />
+    <Content Include="UserInfo.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="area.aspx.cs">
+      <DependentUpon>area.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Control.aspx.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlInfo.aspx.cs">
+      <DependentUpon>ControlInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlNews.aspx.cs">
+      <DependentUpon>ControlNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlUser.aspx.cs">
+      <DependentUpon>ControlUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlView.aspx.cs">
+      <DependentUpon>ControlView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PutNews.aspx.cs">
+      <DependentUpon>PutNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jmp.aspx.cs">
+      <DependentUpon>jmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news_list.aspx.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scene.aspx.cs">
+      <DependentUpon>scene.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="type.aspx.cs">
+      <DependentUpon>type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\05\9f58ae79ffc38c7b35f871491ca7a9ff9ad77c" />
+    <None Include=".git\objects\1d\422bd92ede07f1fb80e414eb6ba67d040778a5" />
+    <None Include=".git\objects\21\7fc356d1a332d8dd4f7bbc8c6eedda77df1b44" />
+    <None Include=".git\objects\23\67f2c12e75c62a78843e15cbd0ff4e2026f4c3" />
+    <None Include=".git\objects\35\a193da80c8b158b424f8f65facbf5d1fdbb1bf" />
+    <None Include=".git\objects\38\e8eb2228044e577e1cc362aa71ce5bac74cc85" />
+    <None Include=".git\objects\3f\91ba4601a8b7f910367f2aabcb8403313309cb" />
+    <None Include=".git\objects\41\2eeda78dc9de1186c2e0e1526764af82ab3431" />
+    <None Include=".git\objects\59\941db492b5f280efd79d43c6f78847a3cdf97f" />
+    <None Include=".git\objects\7a\32f85a362a4d8ff4bc004c929143328211a872" />
+    <None Include=".git\objects\7b\8150fc0008cec72985fcda665d5fb6d74eaa96" />
+    <None Include=".git\objects\8b\76a4958560e3f0fb61e5427d7ab16eee47d616" />
+    <None Include=".git\objects\92\1c9e182bb0930ec907be5e37647c198de32108" />
+    <None Include=".git\objects\9c\15e2a512cb2b8b9643c4e171214000e84db472" />
+    <None Include=".git\objects\a6\381ba3e4b89a82ed882229341905f12d17958e" />
+    <None Include=".git\objects\aa\2eb93363789e7134bf570dce30598dfb1af00b" />
+    <None Include=".git\objects\ae\79a4c8434dc99d9f6e87efefaf2581593ce31f" />
+    <None Include=".git\objects\e6\8edd016ce039f5e117bfb019803f959963f8dd" />
+    <None Include=".git\objects\pack\pack-8d713633aad49687f2576fadac7f9599fee9bf1e.idx" />
+    <None Include=".git\objects\pack\pack-8d713633aad49687f2576fadac7f9599fee9bf1e.pack" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include="app.config" />
+    <None Include="MasterPage.master" />
+    <None Include="src\index_pic\Thumbs.db" />
+    <None Include="src\news_pic\Thumbs.db" />
+    <None Include="src\Thumbs.db" />
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\branches\" />
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
