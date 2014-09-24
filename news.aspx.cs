@@ -22,8 +22,13 @@ public partial class news : System.Web.UI.Page
         Label1.Text = cmd1.ExecuteScalar().ToString();
         string content = "select content from news where id=" + id;
         SqlCommand cmd2 = new SqlCommand(content, con);
-        Label2.Text = cmd2.ExecuteScalar().ToString();
-
+        TextBox1.Text = cmd2.ExecuteScalar().ToString();
+        string author = "select author from news where id=" + id;
+        SqlCommand cmd3 = new SqlCommand(author, con);
+        Label2.Text = cmd3.ExecuteScalar().ToString(); 
+        string time = "select time from news where id=" + id;
+        SqlCommand cmd4 = new SqlCommand(time, con);
+        Label3.Text = cmd4.ExecuteScalar().ToString();
 
 
     }

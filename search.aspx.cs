@@ -9,11 +9,15 @@ using System.Data;
 
 public partial class search : System.Web.UI.Page
 {
+    static bool ff = true;
     protected void Page_Load(object sender, EventArgs e)
     {
-        this.DropDownList1.Items.Add(new ListItem("", ""));
-        DropDownList2.Items.Insert(0, new ListItem("", ""));
-
+        if (ff)
+        {
+            this.DropDownList1.Items.Add(new ListItem("", ""));
+            DropDownList2.Items.Insert(0, new ListItem("", ""));
+            ff = false;
+        }
 
     }
     protected void Button1_Click1(object sender, EventArgs e)

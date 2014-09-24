@@ -40,7 +40,7 @@ public partial class ControlInfo : System.Web.UI.Page
             {　//文件另存在服务器的指定目录下
                 fuImage.PostedFile.SaveAs(path + fuImage.FileName);
                 string s = Server.MapPath("../");
-                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("./") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
+                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("../") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
                 con.Open();
                 string r1 = "~/picture/" + fuImage.FileName;
                 string strsql = "insert into pic(name,url) values ('" + TextBox1.Text + "','" + r1 + "')";
@@ -61,7 +61,7 @@ public partial class ControlInfo : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("./") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("../") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
         con.Open();
         string strsql = "insert into information(name,diyu,leixing,area,people,position,route,famous,intro) values ('" + TextBox1.Text + "','" + DropDownList1.Text + "','" + DropDownList2.Text + "','" + int.Parse(TextBox2.Text) + "','" + int.Parse(TextBox4.Text) + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox8.Text + "','" + TextBox5.Text + "')";
         SqlCommand cmd = new SqlCommand(strsql, con);

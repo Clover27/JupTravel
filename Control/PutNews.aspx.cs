@@ -22,7 +22,7 @@ public partial class Control_Default : System.Web.UI.Page
         else
         {
             string s = Server.MapPath("../");
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("./") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("../") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
             con.Open();
             string a = System.DateTime.Now.ToString();
             string r1; if (RadioButton1.Checked == true) r1 = "announce"; else { r1 = "news"; }

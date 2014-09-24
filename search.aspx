@@ -59,11 +59,11 @@
         勾选方框代表或者，不选则为并且关系,不输入默认为无该条件
     </p>
     <p>
-    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="查看面积大小比例统计图" /></p>
+    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="查看面积大小比例统计图" CssClass="blue"/></p>
     <p>
-    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="查看客流量统计图" /></p>
+    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="查看客流量统计图" CssClass="blue"/></p>
     <p>
-        <asp:Button ID="Button1" runat="server" Text="查询" OnClick="Button1_Click1" />
+        <asp:Button ID="Button1" runat="server" Text="查询" OnClick="Button1_Click1" CssClass="blue"/>
         <asp:DataList ID="DataList1" runat="server"  >
             <ItemTemplate>
 

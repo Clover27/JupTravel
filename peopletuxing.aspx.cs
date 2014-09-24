@@ -35,13 +35,15 @@ public partial class peopletuxing : System.Web.UI.Page
             SqlCommand cmd2 = new SqlCommand(strsql2, con);
             double a = double.Parse(cmd1.ExecuteScalar().ToString());
             double all = double.Parse(cmd2.ExecuteScalar().ToString());
-            double s = a / all; sb += s;
-            return s;
+            double s = a / all; 
+            double aa= Math.Round(s, 2);
+            sb += aa; return aa;
         }
         if (n == 10)
         {
-            sb = 0;
-            return 1 - sb; }
+            double kk = 1 - sb;
+            sb = 0; return kk;
+        }
         return 0;
     }
 }

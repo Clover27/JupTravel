@@ -19,11 +19,24 @@
     
 
     <asp:Label ID="Label1" runat="server" Text="" Font-Size="40px"  Font-Bold="true"></asp:Label><br /><br />
-    <div style="width:344px; margin-left:280px;  height:400px;">
-       <table style="width:100%; font-size:medium;"  border="1">
+
+
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" style="">
+        <ItemTemplate>
+             <div style="height:100px; width:310px;">
+
+        
+            <asp:Image ID="urlLabel" runat="server" ImageUrl='<%# Eval("url") %>' Width="200px" Height="100px"/>
+                
+            <br />
+        </ItemTemplate>
+    </asp:DataList>
+
+    <div style="width:344px; margin-left:280px;  height:500px; margin-top:-100px;">
+       <table style="width:100%; font-size:medium; "  border="1" >
            <tr>
                <td><p class="x">【描&nbsp;述】</p></td>
-               <td><p class="x"><asp:Label ID="Label3" runat="server" Text=""></asp:Label></p></td>
+               <td><p class="x"><asp:Label ID="Label3" runat="server" Text="" Font-Size="Small"></asp:Label></p></td>
            </tr>
            <tr>
                <td><p class="x">【面&nbsp;积】</p></td>
@@ -53,16 +66,7 @@
 
     </div>
 
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" style="height:400px;margin-top:-400px;">
-        <ItemTemplate>
-             <div style="height:100px; width:310px;">
-
-        
-            <asp:Image ID="urlLabel" runat="server" ImageUrl='<%# Eval("url") %>' Width="200px" Height="100px"/>
-                
-            <br />
-        </ItemTemplate>
-    </asp:DataList>
+    
         
     
    
@@ -102,6 +106,6 @@
 
     <asp:TextBox ID="TextBox1" runat="server" Height="104px" Width="499px"  TextMode="MultiLine" ></asp:TextBox>
     <br /> <br/>
-    <asp:Button ID="Button1" runat="server" Text="发 表" OnClick="Button1_Click"  Font-Size="Large"/>
+    <asp:Button ID="Button1" runat="server" Text="发 表" OnClick="Button1_Click"  Font-Size="Large" CssClass="blue"/>
     <br/> <br/>
     </asp:Content>
