@@ -78,7 +78,7 @@
                 <a href="../Index.aspx">返回主页</a><br /><br />
                </div>
 
-            <div class="body">
+            <div style="height:300px;">
                         <br />
                         这里是管理员界面
                         

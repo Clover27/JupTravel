@@ -106,15 +106,21 @@
       
 
         <div class="c">
-            <div class="pic">
-                
-                <asp:DataList ID="DataList4" runat="server" DataSourceID="SqlDataSource4" Font-Size="Larger" style="line-height:50px; margin-left:170px; margin-top:60px;" >
-                    <ItemTemplate>
-                        <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Blue" NavigateUrl='<%#"area.aspx?id="+Eval("last") %>' />
-
+           
+                <div style="align-content:center;text-align:center;">
+                <asp:DataList ID="DataList4" runat="server" DataSourceID="SqlDataSource4" Font-Size="Larger"  style="line-height:50px; align-content:center; align-items:center;  " BackColor="#CCCCCC" BorderColor="#999999"  CellPadding="4" CellSpacing="2" ForeColor="Black" GridLines="Both"  RepeatColumns="3" Width="622px" Height="145px">
+                    <FooterStyle BackColor="#CCCCCC" />
+                    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                    <ItemStyle BackColor="White" />
+                    <ItemTemplate >
+                        <asp:HyperLink ID="lastLabel" style="align-content:center;text-align:center" runat="server" Text='<%# Eval("last") %>' ForeColor="Black" NavigateUrl='<%#"area.aspx?id="+Eval("last") %>' />
+                        &nbsp;
                         <br />
                     </ItemTemplate>
+                    <SelectedItemStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                 </asp:DataList>
+                    </div>
+
                 <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [last] FROM [Classify] WHERE ([first] = @first)">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="地域分类" Name="first" Type="String" />
@@ -122,8 +128,7 @@
                 </asp:SqlDataSource>
                 
                 
-            </div>
-            <div class="text1">
+            
              
 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [information] WHERE ([diyu] = @diyu)">
@@ -132,12 +137,12 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                 
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="157px" DataKeyField="id" Font-Size="Medium" style="line-height:25px; margin-left:30px; margin-top:0px;" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both"  >
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="621px" DataKeyField="id" Font-Size="Medium" style="line-height:30px;" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both"  RepeatColumns="5" Height="47px" >
                     <FooterStyle BackColor="White" ForeColor="#000066" />
                     <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                     <ItemStyle ForeColor="#000066" />
                     <ItemTemplate>
-                        <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>' ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
+                        <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>' ForeColor="Black" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
                          
                         <br />
                         
@@ -147,7 +152,7 @@
                 </asp:DataList>
              
 
-            </div>
+           
 
             
         </div>

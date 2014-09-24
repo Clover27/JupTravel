@@ -12,7 +12,7 @@
     <asp:Label ID="UserLevel" runat="server" Text=""></asp:Label>
     <br/>
     <br/>
-    <asp:Button ID="ModiftPassWord" runat="server" Text="修改密码" OnClick="ModiftPassWord_Click" CssClass="blue"/> &nbsp &nbsp
+    
         <asp:Button ID="Logout" runat="server" Text="注 销" OnClick="Logout_Click" CssClass="blue"/> &nbsp &nbsp
     <%--以下按钮仅管理员可见--%>
         <asp:Button ID="UserManage" runat="server" Text="管 理" OnClick="UserManage_Click" CssClass="blue"/> &nbsp &nbsp

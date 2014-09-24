@@ -83,13 +83,17 @@
 
 
         <div class="c">
-            <div class="pic">
+           
                
-                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" Font-Size="Larger" style="line-height:50px; margin-left:170px; margin-top:60px;" >
+                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" Font-Size="Larger"  style="line-height:50px; align-content:center; align-items:center;  " BackColor="#CCCCCC" BorderColor="#999999"  CellPadding="4" CellSpacing="2" ForeColor="Black" GridLines="Both"  RepeatColumns="3" Width="622px" Height="145px" >
+                    <FooterStyle BackColor="#CCCCCC" />
+                    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                    <ItemStyle BackColor="White" />
                     <ItemTemplate>
-                        <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Blue" NavigateUrl='<%#"type.aspx?id="+Eval("last") %>'/>
+                        <asp:HyperLink ID="lastLabel" runat="server" Text='<%# Eval("last") %>' ForeColor="Black" NavigateUrl='<%#"type.aspx?id="+Eval("last") %>'/>
 <br />
                     </ItemTemplate>
+                    <SelectedItemStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Classify] WHERE ([first] = @last)">
                     <SelectParameters>
@@ -97,17 +101,16 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                
-            </div>
-            <div class="text1">
+           
 
 
-                <asp:DataList ID="DataList2" runat="server" DataKeyField="id" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both" Font-Size="Medium" style="line-height:25px; margin-left:30px; margin-top:0px;"  >
+                <asp:DataList ID="DataList2" runat="server" DataKeyField="id" DataSourceID="SqlDataSource2" Font-Size="Medium" style="line-height:30px;" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both"  RepeatColumns="5" Height="47px" Width="624px" >
                     <FooterStyle BackColor="White" ForeColor="#000066" />
                     <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White"   />
                     <ItemStyle ForeColor="#000066"  />
                     <ItemTemplate>
 
-                        <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>'  ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
+                        <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>'  ForeColor="Black" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
                         <br />
                   
                     </ItemTemplate>
@@ -120,7 +123,7 @@
                 </asp:SqlDataSource>
 
 
-            </div>
+            
 
             
         </div>

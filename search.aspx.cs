@@ -9,9 +9,10 @@ using System.Data;
 
 public partial class search : System.Web.UI.Page
 {
-    static bool ff = true;
+     bool ff = true;
     protected void Page_Load(object sender, EventArgs e)
     {
+
         if (ff)
         {
             this.DropDownList1.Items.Add(new ListItem("", ""));
@@ -22,6 +23,8 @@ public partial class search : System.Web.UI.Page
     }
     protected void Button1_Click1(object sender, EventArgs e)
     {
+        Label1.Visible = true;
+
         int mainf=0;
         int t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0, t6 = 0;
         string a1 = TextBox1.Text; string a21 = DropDownList1.Text; string a22 = DropDownList2.Text; string a3 = TextBox2.Text; string a6 = TextBox7.Text;
@@ -114,7 +117,7 @@ public partial class search : System.Web.UI.Page
         if(a43!=0||a44!=0)
         {
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=Travel;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("./") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
             con.Open();
             string number = "select count(id) from information";
             SqlCommand cmd1 = new SqlCommand(number, con);
@@ -183,12 +186,12 @@ public partial class search : System.Web.UI.Page
         if (a53 != 0 || a54 != 0)
         {
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=Travel;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + Server.MapPath("./") + "App_Data\\Travel.mdf;Integrated Security=True;Connect Timeout=5");
             con.Open();
             string number = "select count(id) from information";
             SqlCommand cmd1 = new SqlCommand(number, con);
             int idnumber = int.Parse(cmd1.ExecuteScalar().ToString());
-            int ss1 = idnumber * a43 / 100; int ss2 = idnumber * a44 / 100;
+            int ss1 = idnumber * a53 / 100; int ss2 = idnumber * a54 / 100;
             mm3 = ss1.ToString(); mm4 = ss2.ToString();
             if (mainf != 0)
             {

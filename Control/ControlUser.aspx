@@ -141,7 +141,7 @@
 
             <div class="body">
 
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" AllowPaging="True">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" AllowPaging="True" Font-Size="14px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="262px" Width="771px">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                         <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
@@ -153,6 +153,15 @@
                         <asp:BoundField DataField="others" HeaderText="others" SortExpression="others" />
                         <asp:BoundField DataField="control" HeaderText="control" SortExpression="control" />
                     </Columns>
+                    <FooterStyle BackColor="#CCCCCC" />
+                    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                    <RowStyle BackColor="White" />
+                    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#808080" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [people] WHERE [id] = @id" InsertCommand="INSERT INTO [people] ([username], [password], [sex], [pic], [information], [others], [control]) VALUES (@username, @password, @sex, @pic, @information, @others, @control)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [people] ORDER BY [id] DESC" UpdateCommand="UPDATE [people] SET [username] = @username, [password] = @password, [sex] = @sex, [pic] = @pic, [information] = @information, [others] = @others, [control] = @control WHERE [id] = @id">
                     <DeleteParameters>

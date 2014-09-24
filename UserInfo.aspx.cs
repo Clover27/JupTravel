@@ -33,10 +33,7 @@ public partial class UserInfo : System.Web.UI.Page
 
 
     }
-    protected void ModiftPassWord_Click(object sender, EventArgs e)
-    {
-
-    }
+ 
     protected void Logout_Click(object sender, EventArgs e)
     {
         Session["Login"] = "no";

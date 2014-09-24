@@ -7,7 +7,7 @@
     <p style="font-size:x-large; font-weight:bold;">新闻资讯</p>
     <%--请实现从数据库中调用新闻信息--%>
     <div style="align-content:center; width: 620px;">
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" Width="527px" ItemStyle-HorizontalAlign="Left"  style="align-content:center">
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" Width="619px" ItemStyle-HorizontalAlign="Left"  style="align-content:center">
         <AlternatingItemStyle BackColor="White" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

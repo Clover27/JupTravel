@@ -15,7 +15,7 @@
     </p>
     <p>
         <asp:CheckBox ID="CheckBox2" runat="server" />
-        景点类型：<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource3" DataTextField="last" DataValueField="last" AppendDataBoundItems="True">
+        景点类型：<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource3" DataTextField="last" DataValueField="last" AppendDataBoundItems="True"  >
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT DISTINCT [last] FROM [Classify] WHERE ([first] = @first)">
             <SelectParameters>
@@ -36,16 +36,16 @@
     </p>
     <p>
         <asp:CheckBox ID="CheckBox4" runat="server" />
-        景点面积：<asp:RadioButton GroupName="1" ID="RadioButton1" runat="server" text="正排"/>
-        <asp:RadioButton GroupName="1" ID="RadioButton2" runat="server" text="倒排"/>  &nbsp
+        景点面积：<asp:RadioButton GroupName="1" ID="RadioButton1" runat="server" text="倒排"/>
+        <asp:RadioButton GroupName="1" ID="RadioButton2" runat="server" text="正排"/>  &nbsp
         <asp:TextBox ID="TextBox3" runat="server" Width="44px"></asp:TextBox>
         %&nbsp--&nbsp
         <asp:TextBox ID="TextBox4" runat="server" Width="49px"></asp:TextBox>%
     </p>
     <p>
         <asp:CheckBox ID="CheckBox5" runat="server" />
-        景点客流量：<asp:RadioButton GroupName="2" ID="RadioButton3" runat="server" text="正排"/>
-        <asp:RadioButton GroupName="2" ID="RadioButton4" runat="server" text="倒排"/>  &nbsp
+        景点客流量：<asp:RadioButton GroupName="2" ID="RadioButton3" runat="server" text="倒排"/>
+        <asp:RadioButton GroupName="2" ID="RadioButton4" runat="server" text="正排"/>  &nbsp
         <asp:TextBox ID="TextBox5" runat="server" Width="44px"></asp:TextBox>
         %&nbsp--&nbsp
         <asp:TextBox ID="TextBox6" runat="server" Width="49px"></asp:TextBox>%
@@ -62,16 +62,23 @@
     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="查看面积大小比例统计图" CssClass="blue"/></p>
     <p>
     <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="查看客流量统计图" CssClass="blue"/></p>
-    <p>
-        <asp:Button ID="Button1" runat="server" Text="查询" OnClick="Button1_Click1" CssClass="blue"/>
-        <asp:DataList ID="DataList1" runat="server"  >
+    <p style="align-content:center;text-align:center">
+        <asp:Button ID="Button1" runat="server" Text="查 询" OnClick="Button1_Click1" CssClass="blue"/>
+        <br/>
+        <p>
+            <asp:Label ID="Label1" runat="server" Text="查询结果" Font-Size="Large" Visible="false"></asp:Label></p>
+        <asp:DataList ID="DataList1" runat="server"   RepeatColumns="6" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" GridLines="Both" Width="625px">
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <ItemStyle BackColor="White" />
             <ItemTemplate>
 
-                <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>' ForeColor="Blue" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
+                <asp:HyperLink ID="nameLabel" runat="server" Text='<%# Eval("name") %>' ForeColor="Black" NavigateUrl='<%#"scene.aspx?id="+Eval("id") %>'/>
                 <br />
 
 <br />
             </ItemTemplate>
+            <SelectedItemStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
         </asp:DataList>
         
     </p>
